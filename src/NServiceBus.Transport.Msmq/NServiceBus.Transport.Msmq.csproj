@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
-    <SignAssembly>true</SignAssembly>
+	<TargetFramework>net472</TargetFramework>  
+	<SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\NServiceBus.snk</AssemblyOriginatorKeyFile>
     <OutputPath>..\..\binaries\</OutputPath>
     <Description>MSMQ support for NServiceBus</Description>
+    <NoWarn>$(NoWarn);NU5110;NU5111;NU5125;NU5048</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="System.Messaging" />
+    <Reference Include="MSMQ.Messaging" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MSMQ.Messaging" Version="1.0.2" />
     <PackageReference Include="NServiceBus" Version="[7.0.0, 8.0.0)" />
     <PackageReference Include="Particular.Packaging" Version="0.1.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SourceLink.Create.GitHub" Version="2.5.0" PrivateAssets="All" />
+    <PackageReference Include="StrongNamer" Version="0.2.5" />
     <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.5.0" />
   </ItemGroup>
 

@@ -2,7 +2,7 @@
 {
     using System;
     using System.ComponentModel;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using System.Runtime.InteropServices;
     using System.Security.Principal;
 
@@ -42,7 +42,7 @@
 
         //Security constants
 
-        // the following constants taken from MessageQueue.cs (see http://referencesource.microsoft.com/#System.Messaging/System/Messaging/MessageQueue.cs)
+        // the following constants taken from MessageQueue.cs (see http://referencesource.microsoft.com/#MSMQ.Messaging/System/Messaging/MessageQueue.cs)
         // ReSharper disable MemberCanBePrivate.Local
         [StructLayout(LayoutKind.Sequential)]
         struct ACE_HEADER

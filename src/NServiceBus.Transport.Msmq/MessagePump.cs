@@ -4,7 +4,7 @@ namespace NServiceBus.Transport.Msmq
     using System.Collections.Concurrent;
     using System.Diagnostics;
     using System.Linq;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using System.Threading;
     using System.Threading.Tasks;
     using Logging;

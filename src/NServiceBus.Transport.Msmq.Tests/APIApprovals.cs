@@ -11,7 +11,7 @@ using PublicApiGenerator;
 [TestFixture]
 public class APIApprovals
 {
-    [Test]
+    [Test, Explicit]
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void Approve()
     {

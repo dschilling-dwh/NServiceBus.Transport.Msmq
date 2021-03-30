@@ -1,7 +1,7 @@
 ﻿namespace NServiceBus.Transport.Msmq.Tests
 {
     using System.IO;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using System.Security.Principal;
     using System.Text;
     using Logging;
@@ -98,7 +98,7 @@
             Assert.That(logOutput.ToString(), Does.Contain("Verified that the queue"));
         }
 
-        // MSMQ Access Rights are defined here: https://msdn.microsoft.com/en-us/library/system.messaging.messagequeueaccessrights(v=vs.110).aspx
+        // MSMQ Access Rights are defined here: https://msdn.microsoft.com/en-us/library/MSMQ.Messaging.messagequeueaccessrights(v=vs.110).aspx
         // FullControl, GenericWrite, GenericRead, ReceiveJournalMessage and ReceiveMessage are combination of rights. See above doco.
         [TestCase(MessageQueueAccessRights.ChangeQueuePermissions, WellKnownSidType.WorldSid)]
         [TestCase(MessageQueueAccessRights.DeleteQueue, WellKnownSidType.WorldSid)]
