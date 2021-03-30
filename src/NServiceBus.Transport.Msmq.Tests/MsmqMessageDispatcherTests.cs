@@ -3,7 +3,7 @@
     using System.Threading.Tasks;
     using System;
     using System.Collections.Generic;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using System.Threading;
     using NServiceBus.Performance.TimeToBeReceived;
     using Routing;

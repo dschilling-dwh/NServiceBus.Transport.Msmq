@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using NUnit.Framework;
     using Performance.TimeToBeReceived;
     using Support;

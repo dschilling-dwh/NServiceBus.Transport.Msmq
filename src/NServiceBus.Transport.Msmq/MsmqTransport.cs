@@ -3,12 +3,12 @@ namespace NServiceBus
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Messaging;
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
     using System.Transactions;
     using Features;
+    using MSMQ.Messaging;
     using Routing;
     using Support;
     using Transport;

@@ -8,7 +8,7 @@
 
 Set-StrictMode -Version 2.0
 
-Add-Type -AssemblyName System.Messaging
+Add-Type -AssemblyName MSMQ.Messaging
 
 Function DeleteQueuesForEndpoint
 {
@@ -39,8 +39,8 @@ Function DeleteQueue
     )
 
     $queuePath = '{0}\private$\{1}'-f [System.Environment]::MachineName, $queueName
-    if ([System.Messaging.MessageQueue]::Exists($queuePath))
+    if ([MSMQ.Messaging.MessageQueue]::Exists($queuePath))
     {
-        [System.Messaging.MessageQueue]::Delete($queuePath)
+        [MSMQ.Messaging.MessageQueue]::Delete($queuePath)
     }
 }

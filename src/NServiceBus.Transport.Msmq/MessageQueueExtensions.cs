@@ -2,9 +2,9 @@
 {
     using System;
     using System.ComponentModel;
-    using System.Messaging;
     using System.Runtime.InteropServices;
     using System.Security.Principal;
+    using MSMQ.Messaging;
 
     /// <summary>
     /// Reads the Access Control Entries (ACE) from an MSMQ queue.

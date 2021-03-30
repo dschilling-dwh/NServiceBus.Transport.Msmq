@@ -5,7 +5,7 @@
     using NServiceBus.AcceptanceTests.EndpointTemplates;
     using NUnit.Framework;
     using System;
-    using System.Messaging;
+    using MSMQ.Messaging;
     using System.Threading.Tasks;
     using System.Transactions;
 

@@ -8,7 +8,7 @@
 # CreateQueue -QueueName "audit" -Account $env:USERNAME
 
 Set-StrictMode -Version 2.0
-Add-Type -AssemblyName System.Messaging
+Add-Type -AssemblyName MSMQ.Messaging
 
 # Helper functions
 Function CreateQueue
@@ -26,8 +26,8 @@ Function CreateQueue
 
     $queuePath = '{0}\private$\{1}' -f $env:COMPUTERNAME, $QueueName
 
-    if (-Not [System.Messaging.MessageQueue]::Exists($queuePath)) {
-        $messageQueue = [System.Messaging.MessageQueue]::Create($queuePath, $true)
+    if (-Not [MSMQ.Messaging.MessageQueue]::Exists($queuePath)) {
+        $messageQueue = [MSMQ.Messaging.MessageQueue]::Create($queuePath, $true)
         SetDefaultPermissionsForQueue -Queue $messageQueue -Account $Account
     }
     else {
@@ -69,7 +69,7 @@ Function SetDefaultPermissionsForQueue
 {
     param(
         [Parameter(Mandatory=$true)]
-        [System.Messaging.MessageQueue] $Queue,
+        [MSMQ.Messaging.MessageQueue] $Queue,
 
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]

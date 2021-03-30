@@ -3,10 +3,10 @@ namespace NServiceBus.Transport.Msmq
     using System;
     using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Messaging;
     using System.Threading;
     using System.Threading.Tasks;
     using System.Transactions;
+    using MSMQ.Messaging;
     using Performance.TimeToBeReceived;
     using Transport;
     using Unicast.Queuing;

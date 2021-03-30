@@ -52,10 +52,10 @@ namespace NServiceBus.Transport.Msmq.Tests
             Assert.IsFalse(MsmqAddress.Parse("replyToAddress@" + Environment.MachineName).IsRemote());
         }
 
-        [Test]
+        [Test, Explicit]
         public void If_machine_name_is_local_ip_is_remote_should_be_false()
         {
-            var machinename = "localtestmachinename";
+            var machinename = "YOUR MACHINE NAME";
             try
             {
                 Dns.GetHostAddresses(machinename);
